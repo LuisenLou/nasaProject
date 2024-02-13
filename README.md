@@ -1,2 +1,2 @@
-# nasaProject
-NASA API 
+# NasaAPIProject
+NASA API Project 
