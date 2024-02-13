@@ -1,9 +1,10 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import Home from './src/screens/Home';
+import Routes from './src/routes';
 
 
+//https://api.nasa.gov/planetary/apod?api_key=M4dpA8GkOggpVzCo0Ol19rzTgezQo61X1PLkLzCv
 
 function App(): JSX.Element {
 
@@ -11,11 +12,11 @@ function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.container}
     >
-      <Home />
+      <Routes/>
 
     </SafeAreaView>
 
-);
+  );
 }
 
 const styles = StyleSheet.create({

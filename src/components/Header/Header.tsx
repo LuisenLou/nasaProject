@@ -2,6 +2,8 @@
 import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
 
+
+
 const Header = () => {
   return (
     <View style= {styles.container}>
@@ -9,7 +11,7 @@ const Header = () => {
         <Text style={styles.title}>Explore</Text>
       </View>
       <View style={styles.rightContainer}>
-        <Image 
+        <Image
           source={require('../../assets/nasa-Logo.png')}
           style={styles.image}
         />
