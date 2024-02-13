@@ -1,5 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import { useRoute } from '@react-navigation/native';
@@ -7,10 +7,15 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParams } from '../../Types';
 import Header from '../../components/Header';
 
+//Componente de la pantalla de Details.
 const Details = () => {
+  //Uso del Hook de react para obtener los parámetros de la ruta asociados con la pantalla actual y, a continuación, utiliza
+  //destructuración para extraer propiedades específicas de esos parámetros.
   const {
     params : {title, url, explanation, date},
   } = useRoute<NativeStackScreenProps<RootStackParams, 'Details'>['route']>();
+  //Especificamos el tipo de ruta, estara relacionada con rutas definidas en RootStackParams y exactamente details.
+  //>['route']> Propiedad del objeto NativeStackScreenProps.
 
   return (
     <View style= {styles.container}>

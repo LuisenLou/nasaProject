@@ -2,8 +2,7 @@
 import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
 
-
-
+//Componente de la cabecera de la pantalla Home. Posee el texto 'Explore' y el asset o imagen del logotipo formato png.
 const Header = () => {
   return (
     <View style= {styles.container}>

@@ -5,14 +5,16 @@ import {PostImage as PostImageTypes, RootStackParams} from '../../Types';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 
+//Tipado que define nuevo tipo que representa propiedades de navegación específicas de la pantalla 'Details' en la pila de navegación.
 type PostImageNavigationProps = NativeStackNavigationProp<RootStackParams, 'Details'>;
 
-
-
+//Componente funcional que posee tipado y recibe datos necesarios por tipado. Retorna datos del tipo sin mostrar todos al pasarlos a la siguiente screen.
 const PostImage: FC<PostImageTypes> = ({title, date, url, explanation}) => {
+  //Funcion del boton que refiere a la pantalla con los datos del componente.
   const handleViewPress = () => {
     navigate('Details' , {title, date, url, explanation});
   };
+  //Permite navegar con la seguridad de que se hace con las props especificas. Hook de react.
   const {navigate} = useNavigation<PostImageNavigationProps>();
   return (
     <View style= {styles.container}>
